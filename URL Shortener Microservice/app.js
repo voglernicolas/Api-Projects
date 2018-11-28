@@ -15,14 +15,12 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/shortUrl");
 app.use(express.static(__dirname + "/public"));
 
 //Crear database entry
-//razon del (*) evita problemas con http:// y las carpetas
 app.get("/new/:urlToShorten(*)", (req,res,next) =>{
   //ES5. let urlToShorten = req.params.urlToShorten
   let {urlToShorten} = req.params;
   //RegExp para URL
 
 });
-
 
 app.listen(3000, () =>{
   console.log("Works!");
