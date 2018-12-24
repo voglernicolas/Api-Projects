@@ -9,7 +9,6 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(useragent.express());
 
-//API url
 var api = "/api/whoami";
 
 app.get(api, function (req, res, next) {
